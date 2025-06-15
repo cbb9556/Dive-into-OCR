@@ -18,6 +18,40 @@
 
 #### x 经过 转置 升维 和 降维
 
+## 总结
+> fillColor=`#FF0DF9`
+
+
+### resnet\-18
+
+#### 由 1个conv7\*7 maxpool和若干个 conv3\*3 且每2个残差组成，最后avg\-pool  fc  整体 channel 3\-64\-128\-256\-512
+
+#### 每个conv 由  conv \+ bn \+ relu
+
+##### 步长为2 下采样 2倍
+
+### resnet\-50
+
+#### 由 1个conv7\*7 maxpool和若干个 conv1\*1conv3\*3conv1\*1 且每3个残差组成，最后avg\-pool  fc  整体 channel 3\-64\-256\-128\-512\-256\-1024\-512\-2048
+
+#### 1\*1 conv 提升通道数， 然后残差后 降低通道数
+
+##### 就是  256 \-128 降通道
+
+##### 64 \- 256 提通道
+
+### 1\*1 cnv的目的
+> fillColor=`#FF0DF9`
+
+
+#### 提升计算效率
+> fillColor=`#FF0DF9`
+
+
+#### 跨通道的信息交互
+> fillColor=`#FF0DF9`
+
+
 ## ResNet18
 
 ### ResNet18的18层代表的是带有权重的18层
